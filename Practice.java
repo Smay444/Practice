@@ -137,7 +137,7 @@ public class Practice {
         //find the last letter location
 
         //loop through the string
-            //if the first does not matches the last
+            //if the first character does not matches the last character
             //return false
             //increase counter first / decrease count second
         //else return true
