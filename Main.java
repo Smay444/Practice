@@ -15,5 +15,14 @@ public class Main {
         int p = 5000;
         Practice.nbYear(p0, percentage, aug, p);
 
+        int number = 1705;
+        Practice.century(number);
+
+        int[] sequence = {1, 2, 3, 4, 5, 3, 5, 6};
+        Practice.solutions(sequence);
+
+        String myStr = "Java can be cool and difficult";
+        Practice.reversedString(myStr);
+
     }
 }

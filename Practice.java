@@ -73,4 +73,41 @@ public class Practice {
         return numOfYears;
     }
 
+    public static int century (int number){
+        double century = Math.ceil(number / 100.0);
+        System.out.println("The year of " + number + " is in century " + century);
+        return (int)century;
+    }
+
+    public static boolean solutions(int[] sequence){
+
+        int numRemoved = 0;
+
+        for (int i=0; i<sequence.length-2; i++){
+            if(sequence[i] >= sequence[i+1]){
+                numRemoved++;
+                if(sequence[i+1] <= sequence[i-1]){
+                    numRemoved++;
+                    System.out.println("The numRemoved is " + numRemoved);
+                    return false;
+                }
+            }
+        }
+        if(numRemoved > 1){
+            System.out.println("The numRemoved is " + numRemoved);
+            return false;
+        } else {
+            System.out.println("The numRemoved is " + numRemoved);
+            return true;
+        }
+    }
+
+    public static String reversedString(String myStr){
+        String reversedStr = "";
+        for (int i=0; i<myStr.length(); i++){
+            reversedStr = myStr.charAt(i) + reversedStr;
+        }
+        System.out.println("Reversed String is: " + reversedStr);
+        return "";
+    }
 }
