@@ -110,4 +110,50 @@ public class Practice {
         System.out.println("Reversed String is: " + reversedStr);
         return "";
     }
+
+    public static int count(String newStr){
+        int countWords = newStr.split(" ").length;
+        System.out.println("The number of words in this String is: " + countWords);
+        return countWords;
+    }
+
+    public static boolean validatePin(String pin){
+
+        //find any non digit characters
+        String noDigitChar = "\\D";
+        int digits = pin.length();
+        if (pin.matches(".*" + noDigitChar + "-*")){
+            return false;
+        } else if(digits == 4 || digits ==6){
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean palindrome(String myStr){
+
+        //find the first letter location
+        //find the last letter location
+
+        //loop through the string
+            //if the first does not matches the last
+            //return false
+            //increase counter first / decrease count second
+        //else return true
+
+        int first = 0;
+        int last = myStr.length()-1;
+
+        while(first<last){
+            if (myStr.charAt(first) != myStr.charAt(last)){
+                System.out.println("This string is not a palindrome");
+                return false;
+            }
+            first++;
+            last--;
+        }
+        System.out.println("The string IS a palindrome");
+        return true;
+    }
 }
