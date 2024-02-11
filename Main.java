@@ -26,7 +26,23 @@ public class Main {
         String newStr = "My name is Staci May";
         Practice.count(newStr);
 
-        String myStr = "banana";
-        Practice.palindrome(myStr);
+        String myStr2 = "banana";
+        Practice.palindrome(myStr2);
+
+        int[] arr = {1,2,3,5,3,3};
+        Practice.findFirstDuplicate(arr);
+
+        String s = "abacabad";
+        Practice.doesNotContain(s);
+
+        int[][] a = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+        Practice.rotate90(a);
+
+        int[] sequence1 = {1,2,1,2};
+        Practice.sequence(sequence1);
     }
 }

@@ -1,4 +1,5 @@
-import java.util.Arrays;
+import java.util.*;
+
 public class Practice {
 
     public static int solution(int[] statues) {
@@ -154,6 +155,92 @@ public class Practice {
             last--;
         }
         System.out.println("The string IS a palindrome");
+        return true;
+    }
+
+    public static int findFirstDuplicate(int[] arr){
+        Set<Integer> seen = new HashSet<>();
+        for(int i : arr){
+            if(seen.contains(i)){
+                System.out.println("The first duplicate # is: " + i);
+                return i;
+            }
+            seen.add(i);
+        }
+
+        return -1;
+    }
+
+    public static char doesNotContain(String s){
+
+        Map<Character, Integer> m = new HashMap<>();
+        char[] newS = s.toCharArray();
+
+        for (int i=0; i<newS.length; i++){
+            if(m.containsKey(newS[i])){
+                m.put(newS[i], m.get(newS[i]) + 1);
+            } else {
+                m.put(newS[i], 1);
+            }
+        }
+
+        for (int i=0; i < newS.length; i++){
+            if(m.get(newS[i]) == 1) return newS[i];
+        }
+
+        return '_';
+    }
+    int[][] a = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+     };
+
+    public static int[][] rotate90(int[][] a){
+
+        int n = a.length;
+
+        for(int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                int temp = a[i][j];
+                a[i][j] = a[j][i];
+                a[j][i] = temp;
+            }
+        }
+
+
+        for (int i = 0; i < n; i++) {
+            for(int j = 0; j < n / 2; j++) {
+                int temp = a[i][j];
+                a[i][j] = a[i][n - 1 - j];
+                a[i][n - 1 - j] = temp;
+            }
+        }
+        System.out.println("The rotated array is: " + Arrays.deepToString(a));
+        return a;
+
+
+    }
+
+    public static boolean sequence(int[] sequence){
+
+        int count = 0;
+
+        for (int i=1; i<sequence.length; i++){
+            if(sequence[i] <= sequence[i-1]){
+                count++;
+                if(count>2){
+                    System.out.println("There is more than 1 number removed");
+                    return false;
+                }
+                if(i>1 && i<sequence.length-1 && sequence[i] <= sequence[i-2] && sequence[i=1] <= sequence[i-1]){
+                    System.out.println("This array can not be consecutive");
+                    return false;
+                }
+            }
+
+        }
+        System.out.println("This array can have only one value removed and still be consecutive");
         return true;
     }
 }
