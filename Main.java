@@ -44,5 +44,32 @@ public class Main {
 
         int[] sequence1 = {1,2,1,2};
         Practice.sequence(sequence1);
+
+        String beast = "great blue heron";
+        String dish = "garlic nann";
+        Practice.feast(beast,dish);
+
+        char[][] grid = {{'.', '.', '.', '1', '4', '.', '.', '2', '.'},
+                        {'.', '.', '6', '.', '.', '.', '.', '.', '.'},
+                        {'.', '.', '.', '.', '.', '.', '.', '.', '.'},
+                        {'.', '.', '1', '.', '.', '.', '.', '.', '.'},
+                        {'.', '6', '7', '.', '.', '.', '.', '.', '9'},
+                        {'.', '.', '.', '.', '.', '.', '8', '1', '.'},
+                        {'.', '3', '.', '.', '.', '.', '.', '.', '6'},
+                        {'.', '.', '.', '.', '.', '7', '.', '.', '.'},
+                        {'.', '.', '.', '5', '.', '.', '.', '7', '.'}};
+
+
+
+        int[] ar = {25, 35, 872, 228, 53, 278, 872};
+        //grab the five see if any other #'s start with a five last char of first #.
+        //% 10 remainder would give you a five ar[0] % 10
+        Practice.crap(ar);
+
+        String myString = "528";
+        Practice.str(myString);
+
+        int[] numbers = { 6, 2, 1, 8, 10};
+        Practice.sum(numbers);
     }
 }

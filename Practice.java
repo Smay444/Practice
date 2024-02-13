@@ -243,4 +243,63 @@ public class Practice {
         System.out.println("This array can have only one value removed and still be consecutive");
         return true;
     }
-}
+
+    public static boolean feast (String beast, String dish){
+
+        char beastChar = beast.charAt(0);
+        char dishChar = dish.charAt(0);
+        char beastLast = beast.charAt(beast.length()-1);
+        char dishLast = dish.charAt(dish.length()-1);
+
+        if ((beastChar == dishChar) && (beastLast == dishLast)){
+            System.out.println("the two characters match" );
+            return true;
+        }
+        System.out.println("The two characters do not match");
+        return false;
+    }
+
+    public static long crap(int[] ar){
+
+        int counter = 0;
+
+        for (int i : ar){
+            String myString = String.valueOf(i);
+            for(char myChar : myString.toCharArray()){
+                System.out.print(myChar);
+            }
+            System.out.println();
+        }
+
+        return 0;
+        }
+
+        public static String str(String myString) {
+
+            String s = myString;
+            String t = "825";
+
+            if (s.contains(t)) {
+                System.out.println("you was right");
+            } else {
+                System.out.println("I was Right");
+            }
+            return s;
+        }
+
+        public static int sum(int[] numbers){
+            int sum = 0;
+            Arrays.sort(numbers);
+            System.out.println("The sorted array is: " + Arrays.toString(numbers));
+
+            for (int i=1; i<numbers.length-1; i++){
+                sum += numbers[i];
+            }
+            System.out.println("The sum of the array is: " + sum);
+            return sum;
+        }
+
+    }
+
+
+
